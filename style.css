@@ -6,3 +6,82 @@
     0 8px 18px rgba(0, 0, 0, 0.12);backdrop-filter:blur(0.5px);-webkit-tap-highlight-color:transparent;overflow:hidden;will-change:width, height, transform;}#i6zxcf .bubble-button:hover{transform:translateY(-2px) scale(1.04);box-shadow:inset 0 0 26px rgba(255, 255, 255, 0.5),
     inset 0 -12px 26px rgba(128, 0, 32, 0.2),
     0 10px 22px rgba(0, 0, 0, 0.14);border-color:rgba(240, 233, 222, 0.7);}#i6zxcf .bubble-button:focus-visible{outline:2px solid rgba(240, 233, 222, 0.65);outline-offset:2px;}#i6zxcf .bubble-button::before{content:"";position:absolute;top:14%;left:18%;width:36%;height:36%;border-radius:9999px;background:radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.3) 60%, rgba(255, 255, 255, 0) 100%);pointer-events:none;filter:blur(0.2px);}#i6zxcf .bubble-button::after{content:"";position:absolute;inset:0;border-radius:9999px;border:2px solid rgba(240, 233, 222, 0.75);transform:scale(0.7);opacity:0;pointer-events:none;transition:transform 320ms ease, opacity 320ms ease;}#i6zxcf .bubble-button.is-popping{animation:bubble-pop 320ms ease;}#i6zxcf .bubble-button.is-popping::after{transform:scale(1.35);opacity:0;}#i6zxcf .random-fact-output{display:none;}#i6zxcf .bubble-button .bubble-label{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%);opacity:0;pointer-events:none;user-select:none;}#i6zxcf .bubble-button .bubble-text{display:inline-block;max-width:80%;text-align:center;line-height:1.25;opacity:0;transform:translateY(4px);transition:opacity 180ms ease, transform 180ms ease;pointer-events:none;white-space:normal;word-break:break-word;}#i6zxcf .bubble-button.show-text .bubble-text{opacity:1;transform:translateY(0);}#i6zxcf .bubble-button.expand-open{padding:12px 14px;}#iko0ef{padding-top:18px;padding-right:0px;padding-bottom:39px;padding-left:39px;}#ijx625{display:none;}#iko0ef .contact-title{font-weight:600;}#iko0ef .contact-copy{color:#F8BBD0;}#iko0ef .contact-form{display:grid;gap:1rem;margin-top:0.25rem;}#iko0ef .form-row{display:grid;grid-template-columns:repeat(2, minmax(0, 1fr));gap:1rem;}#iko0ef .form-field, #iko0ef .form-fieldset{display:grid;gap:0.5rem;}#iko0ef label, #iko0ef legend{font-size:0.9375rem;line-height:1.4;color:#F0E9DE;}#iko0ef input[type="text"], #iko0ef input[type="email"], #iko0ef textarea{width:100%;border-radius:12px;border:1px solid rgba(240, 233, 222, 0.25);background-color:rgba(240, 233, 222, 0.06);color:#F8BBD0;padding:0.75rem 0.875rem;transition:border-color 200ms ease, box-shadow 200ms ease, transform 160ms ease;outline:none;}#iko0ef input::placeholder, #iko0ef textarea::placeholder{color:rgba(248, 187, 208, 0.8);}#iko0ef input:focus, #iko0ef textarea:focus{border-color:rgba(240, 233, 222, 0.6);box-shadow:0 0 0 3px rgba(240, 233, 222, 0.18);}#iko0ef .form-fieldset{margin:0;padding:0.25rem 0 0;border:0;}#iko0ef .choices{display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;}#iko0ef .choice{display:inline-flex;align-items:center;gap:0.5rem;padding:0.375rem 0.5rem;border-radius:9999px;border:1px solid rgba(240, 233, 222, 0.25);background-color:rgba(240, 233, 222, 0.04);color:#F8BBD0;transition:background-color 200ms ease, border-color 200ms ease;user-select:none;}#iko0ef .choice:hover{background-color:rgba(240, 233, 222, 0.06);border-color:rgba(240, 233, 222, 0.35);}#iko0ef .choice input[type="checkbox"]{accent-color:#F0E9DE;width:16px;height:16px;}#iko0ef .actions{margin-top:0.25rem;display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;}#iko0ef .submit-btn{padding-left:1.25rem;padding-right:1.25rem;padding-top:0.7rem;padding-bottom:0.7rem;font-size:16px;font-weight:500;}#iko0ef .hint{font-size:0.8125rem;color:rgba(248, 187, 208, 0.9);}#ivqtzz-2{font-size:10pt;}#ixx2lq{font-size:24pt;}#ixx2lq-2{font-size:24pt;}#i5qs2e{font-size:12pt;}.gjs-image-box{height:200px;width:100%;}#ivdq4c{background-image:url('https://cdn.grapesjs.com/workspaces/cmg0k2lxj01ovjsx3o519t0iq/assets/7b9ab55e-6be1-42f9-99d0-26c4432f799e__285bffc2-59a0-42d8-8fb0-55842d960629.jpg');background-size:contain;background-position:center center;background-attachment:scroll;background-repeat:no-repeat;}@keyframes ripple{from{transform:translate(-50%, -50%) scale(0.2);opacity:0.6;}to{transform:translate(-50%, -50%) scale(9);opacity:0;}}@keyframes rise{0%{transform:translateY(0) scale(1);opacity:.6;}100%{transform:translateY(-60px) scale(0.8);opacity:0;}}@keyframes twinkle{0%, 100%{opacity:1;transform:scale(1);}50%{opacity:0.5;transform:scale(0.85);}}@media (prefers-reduced-motion: reduce){#ipou .aos-init, #ipou .aos-zoom-init{opacity:1;transform:none;transition:none;}#ipou .cursor-bubble{display:none;}#ipou .gjs-t-button, #ipou .bubble-button, #ipou .easter-egg-pearl-button, #ipou .treasure-card, #ipou .random-fact-card, #ipou .easter-egg-card, #ipou .mini-blog-card, #ipou .contact-card, #ipou .mini-blog-item, #ipou .about-profile-image, #ipou .treasures-chest-image, #ipou .moodboard-item img, #ipou #iuqbwm{transition:none;}}@keyframes bubble-pop{0%{transform:scale(1);}40%{transform:scale(0.9);}70%{transform:scale(1.08);}100%{transform:scale(1);}}@media (max-width: 992px){.primary-navigation{gap:1rem;}.hero-container{padding-top:4rem;padding-bottom:5rem;}.about-container{padding-top:4rem;padding-bottom:4rem;}.about-grid{grid-template-columns:repeat(1, minmax(0, 1fr));}.treasures-container{padding-top:4rem;padding-bottom:4rem;}.treasures-header-row{flex-direction:column;}.treasures-chest-figure{display:block;}.treasures-grid{grid-template-columns:repeat(2, minmax(0, 1fr));}.horizon-container{padding-top:4rem;padding-bottom:4rem;}.horizon-grid{grid-template-columns:repeat(1, minmax(0, 1fr));}.ripples-container{padding-top:4rem;padding-bottom:4rem;}.ripples-header-row{flex-direction:column;}.ripples-hint{display:block;}.ripples-grid{grid-template-columns:repeat(1, minmax(0, 1fr));}.footer-container{flex-direction:column;gap:1rem;}#ipou .header-navigation{background-color:rgba(139, 46, 75, 0.82);}#ipou .nav-link:hover{transform:none;}#i6zxcf .bubble-button{min-width:76px;min-height:76px;}#iko0ef .form-row{grid-template-columns:1fr;}}@media (max-width: 480px){.hero-container{padding-top:3rem;padding-bottom:3.5rem;}.hero-pearl-visual{width:10rem;height:10rem;}.about-container{padding-top:3rem;padding-bottom:3rem;}.treasures-container{padding-top:3rem;padding-bottom:3rem;}.treasures-grid{grid-template-columns:repeat(1, minmax(0, 1fr));}.horizon-container{padding-top:3rem;padding-bottom:3rem;}.ripples-container{padding-top:3rem;padding-bottom:3rem;}#ipou .header-navigation{background-color:rgba(139, 46, 75, 0.9);}#ipou .gjs-t-button:hover, #ipou .bubble-button:hover, #ipou .easter-egg-pearl-button:hover{transform:translateY(-1px) scale(1.015);}#i6zxcf .bubble-button{min-width:68px;min-height:68px;font-size:0.8125rem;}#i6zxcf .bubble-button .bubble-text{max-width:86%;font-size:0.8125rem;}#iko0ef .choice{padding:0.35rem 0.5rem;}#iko0ef .submit-btn{font-size:15px;}}
+
+/* ===== Replace/override cursor & bubble trail with pearly cursor ===== */
+
+/* Hide native cursor and use a centered pearl SVG as the pointer.
+   Hotspot set to center (20 20). Works without external files. */
+:root { --pearl-cursor-svg: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'>\
+  <defs>\
+    <radialGradient id='g' cx='30%25' cy='30%25' r='70%25'>\
+      <stop offset='0' stop-color='%23ffffff'/>\
+      <stop offset='0.55' stop-color='%23f5f7ff'/>\
+      <stop offset='1' stop-color='%23C3B1E1'/>\
+    </radialGradient>\
+    <filter id='s' x='-50%25' y='-50%25' width='200%25' height='200%25'>\
+      <feGaussianBlur stdDeviation='1.2' result='b'/>\
+      <feMerge><feMergeNode in='b'/><feMergeNode in='SourceGraphic'/></feMerge>\
+    </filter>\
+  </defs>\
+  <g filter='url(%23s)'>\
+    <circle cx='20' cy='18' r='10' fill='url(%23g)' stroke='%23ffffff' stroke-opacity='0.6' stroke-width='0.9'/>\
+    <ellipse cx='14' cy='13' rx='4.5' ry='2.6' fill='rgba(255,255,255,0.95)' opacity='0.95'/>\
+  </g>\
+</svg>") ; }
+
+/* Apply pearl cursor site-wide (center hotspot) and hide default cursor */
+html, body, a, button, input, textarea, .gjs-t-button {
+  cursor: none; /* hide native; pearl svg below will be used by ::after */
+}
+
+body {
+  cursor: var(--pearl-cursor-svg) 20 20, auto;
+}
+
+.cursor-bubble,
+#ipou .cursor-bubble {
+  position: fixed !important;
+  pointer-events: none !important;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+  width: 12px; height: 12px;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 30% 30%,
+    rgba(255,255,255,1) 0%,
+    rgba(245,247,255,0.9) 28%,
+    rgba(195,177,225,0.85) 58%,
+    rgba(195,177,225,0.3) 78%,
+    transparent 100%);
+  border: 1px solid rgba(255,255,255,0.7);
+  box-shadow:
+    0 6px 18px rgba(195,177,225,0.18),
+    inset 0 2px 6px rgba(255,255,255,0.85);
+  filter: drop-shadow(0 2px 6px rgba(120,100,140,0.12));
+  opacity: 0.95;
+  z-index: 99999;
+  animation: pearl-rise 0.9s ease-out forwards;
+}
+
+.cursor-bubble.small { transform: translate(-50%, -50%) scale(0.75); opacity:0.9; }
+.cursor-bubble.large { transform: translate(-50%, -50%) scale(1.25); opacity:1; }
+
+@keyframes pearl-rise {
+  0%   { transform: translate(-50%, -50%) translateY(0) scale(1); opacity:1; }
+  70%  { transform: translate(-50%, -50%) translateY(-28px) scale(0.92); opacity:0.65; }
+  100% { transform: translate(-50%, -50%) translateY(-44px) scale(0.8); opacity:0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor-bubble, #ipou .cursor-bubble { animation: none; opacity: 0.7; transform: translate(-50%, -50%); }
+}
+
+/* Force bubbles visible (ignore prefers-reduced-motion) */
+@media (prefers-reduced-motion: reduce) {
+  .cursor-bubble,
+  #ipou .cursor-bubble {
+    display: block !important;
+    animation: pearl-rise 0.9s ease-out forwards;
+  }
+}
