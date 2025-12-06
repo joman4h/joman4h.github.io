@@ -83,7 +83,7 @@ int main()
           updateStatus('Auto-typing…');
           if (autoBtn) autoBtn.setAttribute('aria-pressed', 'true');
           autoTimer = setInterval(() => {
-            const speed = Math.floor(Math.random()*3)+1; // 1-3 chars per tick
+            const speed = Math.floor(Math.random()*3)+1;
             appendNextChar(speed);
             if(idx >= code.length){
               stopAutoType();
@@ -108,7 +108,7 @@ int main()
           caretPos.textContent = '0';
           updateStatus('Ready');
           terminal.scrollTop = 0;
-          // Keep focus on terminal for accessibility, but we also capture at document level
+
           terminal.focus({ preventScroll: true });
         }
 
@@ -123,7 +123,7 @@ int main()
           });
         }
 
-        // Terminal-local key handling (when focused)
+
         terminal.addEventListener('keydown', (e)=>{
           const navKeys = ['ArrowUp','ArrowDown','ArrowLeft','ArrowRight','Tab','Escape'];
           if(navKeys.includes(e.key)) return;
@@ -137,13 +137,13 @@ int main()
           }
         });
 
-        // Capture global keyboard input and ignore it, always print code
+
         document.addEventListener('keydown', (e) => {
           const navKeys = ['ArrowUp','ArrowDown','ArrowLeft','ArrowRight','Tab','Escape'];
           if (navKeys.includes(e.key)) return;
-          // Skip when typing in inputs or contenteditable areas
+
           if (e.target && (e.target.closest('input, textarea, select, button') || e.target.isContentEditable)) return;
-          // Avoid double handling if terminal already received it
+
           if (e.target === terminal) return;
           e.preventDefault();
           const multiplier = e.repeat ? 2 : 1;
@@ -151,11 +151,11 @@ int main()
           updateStatus(idx >= code.length ? 'Completed' : 'Typing…');
         }, { passive: false });
 
-        // Focus on click to ensure it captures key events
+
         terminal.addEventListener('click', ()=>terminal.focus());
         terminal.addEventListener('focus', ()=>updateStatus('Ready'));
 
-        // Optional buttons (guarded if not present)
+
         if (autoBtn) {
           autoBtn.addEventListener('click', ()=>{
             if(autoTimer){ stopAutoType(); }
@@ -169,7 +169,7 @@ int main()
           resetBtn.addEventListener('click', resetTerminal);
         }
 
-        // Ripple effect on buttons
+
         document.querySelectorAll('.btn-ripple').forEach(btn=>{
           btn.addEventListener('click', function(e){
             const r = document.createElement('span');
@@ -182,7 +182,7 @@ int main()
           });
         });
 
-        // Initialize
+
         resetTerminal();
       })();
     </script></body>
