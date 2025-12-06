@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Try programming!</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="robots" content="index,follow">
+  <meta name="generator" content="GrapesJS Studio">
+  <meta name="description" content="A playful interactive box that makes you look like a movie hacker — it prints complex C++ code no matter what you type."/>
+  <meta property="og:title" content="Try programming!"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Poppins:wght@400;500;600&amp;family=Source+Code+Pro:wght@400;600&amp;display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="./style.css">
+  </head>
+  <body class="gjs-t-body" id="izpv6m"><header id="ipou-2" class="site-header"><div class="header-navigation"></div></header><main class="main-content"><section class="page-intro-section"></section><section class="hacker-box-section"><div class="hacker-box-container" id="iz4z5f"><div class="hacker-box-panel" id="ij8o57"><div class="toolbar" id="i9kopn"><span class="terminal-title" id="ikctfz">Ever wanted to feel like a programmer? now you can!</span><div class="toolbar-left"></div><div id="i1care" class="toolbar-actions"></div></div><span class="toolbar-hint" id="i77prl"><img src="https://api.iconify.design/lucide-keyboard.svg?color=%236b7280" alt="" class="icon-keyboard"/>
+                  Press any keys to type. Try holding a key for speed!
+                <button type="button" id="resetBtn" class="gjs-t-button reset-button btn-ripple"><img src="https://api.iconify.design/lucide-refresh-ccw.svg?color=white" alt="" class="icon-reset"/>
+      Reset
+    </button></span><div class="terminal-card"><div class="terminal-header"><div class="header-left"><span aria-hidden="true" class="dot-close"></span><span aria-hidden="true" class="dot-minimize"></span><span aria-hidden="true" class="dot-maximize"></span><span class="terminal-title" id="icujll">Try it out!</span></div><div class="header-right"><span id="statusText">Ready</span></div></div><div class="terminal-body"><div id="terminal" role="textbox" aria-label="Hacker terminal. Press any keys to produce code." tabindex="0" class="terminal-content"><pre id="terminalPre" class="terminal-pre"><span class="prompt">$</span> Type to begin...</pre></div><div class="terminal-footer"><div class="footer-hint" id="is0n82">Tip: The code prints regardless of what you type.</div><div class="footer-caret" id="iitm1f">Char:<span id="caretPos">0</span>/<span id="caretTotal">0</span></div></div></div></div><div class="notes-block"></div></div><span class="terminal-title" id="icxxta">(This is old code ) </span></div></section></main><footer id="i8nqpa-3" class="site-footer"></footer><script id="i2ibx7">
+      (function(){
+        const code = `#include <iostream>
+#include <stack>
+#include <vector>
+#include<algorithm>
+using namespace std;
+
+int main()
+{
+    int n;cin>>n;
+    vector<char>vc;
+    vector<char>vc2;
+    vector<string>res;
+    for(int m=0;m<n;m++){
+       vc.clear();
+       vc2.clear();
+       int q;cin>>q;
+       for(int i=0;i<q;i++){
+           char v;cin>>v;
+           vc.push_back(v);
+       }
+       for(int i=0;i<q;i++){
+           char v;cin>>v;
+           vc2.push_back(v);
+       }
+       sort(vc.begin(),vc.end());
+       sort(vc2.begin(),vc2.end());
+       if (vc == vc2&&vc.size()==vc2.size()) res.push_back("yes");
+       else res.push_back("no");
+       
+    }
+    for(int o=0;o<res.size();o++){
+        cout<<res[o]<<endl;
+    }
+    
+}
+`;
+        const terminal = document.getElementById('terminal');
+        const pre = document.getElementById('terminalPre');
+        const statusText = document.getElementById('statusText');
+        const caretPos = document.getElementById('caretPos');
+        const caretTotal = document.getElementById('caretTotal');
+        const autoBtn = document.getElementById('autoTypeBtn');
+        const copyBtn = document.getElementById('copyBtn');
+        const resetBtn = document.getElementById('resetBtn');
+
+        let idx = 0;
+        let autoTimer = null;
+        caretTotal.textContent = String(code.length);
+
+        function updateStatus(s){ statusText.textContent = s; }
+        function appendNextChar(multiplier=1){
+          if(idx >= code.length) return;
+          const chunkLen = Math.min(multiplier, code.length - idx);
+          const chunk = code.slice(idx, idx + chunkLen);
+          if(pre.textContent.startsWith('$')) pre.textContent = '';
+          pre.textContent += chunk;
+          idx += chunkLen;
+          caretPos.textContent = String(idx);
+          if(terminal) terminal.scrollTop = terminal.scrollHeight;
+        }
+
+        function startAutoType(){
+          if(autoTimer) return;
+          updateStatus('Auto-typing…');
+          if (autoBtn) autoBtn.setAttribute('aria-pressed', 'true');
+          autoTimer = setInterval(() => {
+            const speed = Math.floor(Math.random()*3)+1; // 1-3 chars per tick
+            appendNextChar(speed);
+            if(idx >= code.length){
+              stopAutoType();
+              updateStatus('Completed');
+            }
+          }, 28);
+        }
+
+        function stopAutoType(){
+          if(autoTimer){
+            clearInterval(autoTimer);
+            autoTimer = null;
+          }
+          if (autoBtn) autoBtn.setAttribute('aria-pressed', 'false');
+          updateStatus('Ready');
+        }
+
+        function resetTerminal(){
+          stopAutoType();
+          idx = 0;
+          pre.textContent = '$ Type to begin...';
+          caretPos.textContent = '0';
+          updateStatus('Ready');
+          terminal.scrollTop = 0;
+          // Keep focus on terminal for accessibility, but we also capture at document level
+          terminal.focus({ preventScroll: true });
+        }
+
+        function copyCode(){
+          const toCopy = code;
+          navigator.clipboard.writeText(toCopy).then(()=>{
+            updateStatus('Copied!');
+            setTimeout(()=>updateStatus('Ready'), 1200);
+          }).catch(()=>{
+            updateStatus('Copy failed');
+            setTimeout(()=>updateStatus('Ready'), 1400);
+          });
+        }
+
+        // Terminal-local key handling (when focused)
+        terminal.addEventListener('keydown', (e)=>{
+          const navKeys = ['ArrowUp','ArrowDown','ArrowLeft','ArrowRight','Tab','Escape'];
+          if(navKeys.includes(e.key)) return;
+          e.preventDefault();
+          const multiplier = e.repeat ? 2 : 1;
+          appendNextChar(multiplier);
+          if(idx >= code.length){
+            updateStatus('Completed');
+          } else {
+            updateStatus('Typing…');
+          }
+        });
+
+        // Capture global keyboard input and ignore it, always print code
+        document.addEventListener('keydown', (e) => {
+          const navKeys = ['ArrowUp','ArrowDown','ArrowLeft','ArrowRight','Tab','Escape'];
+          if (navKeys.includes(e.key)) return;
+          // Skip when typing in inputs or contenteditable areas
+          if (e.target && (e.target.closest('input, textarea, select, button') || e.target.isContentEditable)) return;
+          // Avoid double handling if terminal already received it
+          if (e.target === terminal) return;
+          e.preventDefault();
+          const multiplier = e.repeat ? 2 : 1;
+          appendNextChar(multiplier);
+          updateStatus(idx >= code.length ? 'Completed' : 'Typing…');
+        }, { passive: false });
+
+        // Focus on click to ensure it captures key events
+        terminal.addEventListener('click', ()=>terminal.focus());
+        terminal.addEventListener('focus', ()=>updateStatus('Ready'));
+
+        // Optional buttons (guarded if not present)
+        if (autoBtn) {
+          autoBtn.addEventListener('click', ()=>{
+            if(autoTimer){ stopAutoType(); }
+            else startAutoType();
+          });
+        }
+        if (copyBtn) {
+          copyBtn.addEventListener('click', copyCode);
+        }
+        if (resetBtn) {
+          resetBtn.addEventListener('click', resetTerminal);
+        }
+
+        // Ripple effect on buttons
+        document.querySelectorAll('.btn-ripple').forEach(btn=>{
+          btn.addEventListener('click', function(e){
+            const r = document.createElement('span');
+            r.className = 'ripple';
+            const rect = this.getBoundingClientRect();
+            r.style.left = (e.clientX - rect.left) + 'px';
+            r.style.top = (e.clientY - rect.top) + 'px';
+            this.appendChild(r);
+            setTimeout(()=>r.remove(), 700);
+          });
+        });
+
+        // Initialize
+        resetTerminal();
+      })();
+    </script></body>
+</html>
