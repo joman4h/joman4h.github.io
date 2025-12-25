@@ -1,5 +1,5 @@
 # old-school-theme
-inspo: NomnomNami
+credits to og theme: NomnomNami, thanks!
 
 This is the "old school" (aka indie web-esque) version of my website , nothing too complicated yet.
 Feel free to explore it.
