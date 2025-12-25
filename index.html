@@ -188,7 +188,7 @@
       document.addEventListener('mousemove', om, { passive: true });
       setTimeout(function () { rp(); }, 300);
     })();
-  </script></section></div></div><footer id="iig6c2" class="footer-section"><div id="igfwpd" class="footer-container"><p id="i5b6xj" class="footer-text">
+  </script></section></div></div><div style="padding: 2rem; text-align: center;"><button type="button" id="btnThemeSwitch" class="gjs-t-button btn-ripple" style="padding: 0.75rem 1.5rem;">Switch Theme →</button></div><footer id="iig6c2" class="footer-section"><div id="igfwpd" class="footer-container"><p id="i5b6xj" class="footer-text">
           Just like pearls, people are shaped by time and experience. Thanks for visiting my little ocean.
         </p><small id="i2atnl" class="footer-copyright">© <span id="yearNow"></span> Jomana Hamdy</small></div></footer><script id="i4xl9k">
       document.getElementById('yearNow').textContent = new Date().getFullYear();
@@ -198,6 +198,13 @@
         bd.addEventListener('click', () => {
           const x = document.querySelector('#about');
           if (x) x.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      }
+
+      const bts = document.getElementById('btnThemeSwitch');
+      if (bts) {
+        bts.addEventListener('click', () => {
+          window.location.href = './theme/index.html';
         });
       }
 
