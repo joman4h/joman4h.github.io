@@ -3,7 +3,7 @@
 Hi! My name is Jomana.This is my personal website.
 The inspiratoon for my website comes from my very name !  It means silver pearl so -naturally- you'll find the whole website ocean-themed ( tabs names , cursor effects , etc...)
 ---
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 # Built with
 ### Built With
@@ -18,7 +18,7 @@ The inspiratoon for my website comes from my very name !  It means silver pearl 
 
 
 ---
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 # Pages
 
@@ -30,10 +30,10 @@ The inspiratoon for my website comes from my very name !  It means silver pearl 
 | `na3na3.html` | A mini article about my love for mint tea <3 |
 | `colour.html` | The colors we see we trust as true , but what if my yellow is your blue? |
 | `programming.html` | Have you ever dreamt of being a programmer? Now you can with our latest NIMBUS-1700!(A page where you can simulate writing code by pressing random buttons) |
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ---
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ### Welcome brave adventurer on this not-so-long venture through the seas , complete the tasks below to gain the glory of a real sea hero!
 
@@ -58,6 +58,8 @@ The inspiratoon for my website comes from my very name !  It means silver pearl 
 > * [ ] Switch themes (and note any suggestions , it's still in beta).
 
 > * [ ] Leave a message in the guestbook(with your progress!(how many you finished out of 10!))
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 
