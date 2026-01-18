@@ -3,6 +3,8 @@
 Hi! My name is Jomana.This is my personal website.
 The inspiratoon for my website comes from my very name !  It means silver pearl so -naturally- you'll find the whole website ocean-themed ( tabs names , cursor effects , etc...)
 ---
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 # Built with
 ### Built With
 
@@ -13,9 +15,10 @@ The inspiratoon for my website comes from my very name !  It means silver pearl 
 * [![Atabook](https://img.shields.io/badge/Atabook-000000?style=for-the-badge&logo=github&logoColor=white)](https://atabook.org/)
 * [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=github&logoColor=white)](https://pages.github.com/)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ---
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 # Pages
 
@@ -30,6 +33,8 @@ The inspiratoon for my website comes from my very name !  It means silver pearl 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ---
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ### Welcome brave adventurer on this not-so-long venture through the seas , complete the tasks below to gain the glory of a real sea hero!
 
 > ![Progress](https://geps.dev/progress/0) > 
@@ -52,7 +57,7 @@ The inspiratoon for my website comes from my very name !  It means silver pearl 
 
 > * [ ] Switch themes (and note any suggestions , it's still in beta).
 
-> * [ ] Leave a message in the guestbook(with your progress!)
+> * [ ] Leave a message in the guestbook(with your progress!(how many you finished out of 10!))
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
